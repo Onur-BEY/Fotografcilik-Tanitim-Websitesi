@@ -1,0 +1,525 @@
+* {
+    /* Tüm CSS kodlarını sıfırlar.*/
+    padding: 0px;
+    /* İçerik ile border arasında olan boşluğu sıfırlar.*/
+    margin: 0px;
+    /* HTML elementinin çevresi ile ona komşu başka bir HTML elementi arasındaki boşluğu sıfırlar.*/
+    font-family: fantasy;
+    /* Yazı tipini değiştirir.*/
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("Wallpaper1.jpg");
+    /* Arka plan resmini belirler.*/
+}
+
+header {
+    /* class'ı main olan div'i stiller.*/
+    display: flex;
+    /* Elementin türünü değiştirir.*/
+    width: 100%;
+    /* Sayfanın %100'ünü kaplar.*/
+    height: 180px;
+    /* Yüksekliği belirler.*/
+    background-size: cover;
+    /* Ekranı kaplar.*/
+    background-attachment: fixed;
+    /* Arka planın resmini hep sabit tutar.*/
+    background-repeat: repeat-y;
+    /* Y ekseninde arka plan resmini tekrar eder.*/
+}
+
+.navbar {
+    /* class'ı navbar olan div'i stiller.*/
+    display: flex;
+    /* Elementin türünü değiştirir.*/
+    width: 90%;
+    /* Genişliğini belirler.*/
+    height: 110px;
+    /* Yüksekliği belirler.*/
+    margin: 0px 60px;
+    padding: 32px 0px;
+    /* Alttan üstten 32px, sağdan soldan 0px alan bırakır.*/
+    align-items: center;
+    /* content kısmını merkeze alır.*/
+    justify-content: space-between;
+    /* Araya boşluk koyarak bir elementi sağa diğerini sola yaslar.*/
+    background-color: rgb(208, 157, 90);
+    /* Arka plan rengini belirler.*/
+    border-radius: 40px;
+    /* HTML elementinin sınırlarını yuvarlaklaştırır.(sınır yarıçapı)*/
+    border: solid 1px rgba(95, 45, 1, 0.575);
+    /* navbar'ın kenarlarını 1px yuvarlakşatırıp rengini ve stilini değiştirir.*/
+    position: fixed;
+    /* navbar'ı hep olduğu yere sabitler. Aşağı indiğimizden yukarda kalmaz.*/
+    z-index: 1;
+    /* Menünün her zaman önde gözükmesini sağlar.*/
+}
+
+.logo {
+    /* class'ı logo olan img'i stiller.*/
+    margin: 5px;
+    cursor: pointer;
+    /* Logonun üstüne gelince imleç basma durumuna gelir.*/
+    border-radius: 50%;
+    /* Kenarları yuvarlak yapar.*/
+    user-select: none;
+    /* Logoyu kopyalamaya izin vermez. */
+}
+
+.navbar ul li {
+    /* navbar class'ının içindeki ul listesinin elemanlarını stiller.*/
+    list-style-type: none;
+    /* Linklerin yanındaki noktaları kaldırır.*/
+    display: inline-block;
+    margin: 0 25px;
+}
+
+.navbar ul li a {
+    /* navbar class'ının içindeki ul listesinin elemanlarının linklerini stiller.*/
+    text-decoration: none;
+    /* Linklerin altındaki çizgiyi kaldırır.*/
+    color: #fff;
+    /* Rengini belirler.*/
+    font-size: 20px;
+    /* Yazı tipinin boyutunu belirler.*/
+}
+
+.navbar ul li a:hover {
+    /* navbar class'ının içindeki ul listesinin elemanlarının linklerinin üstüne imleç getirdiğimiz zaman aşağıdakileri uygular.*/
+    color: black;
+    box-shadow: 0 2px red;
+    /* İmleç üstüne geldiğinde altına kırmızı çizgi çeker.*/
+    transition: 2s;
+    /* 2 saniye bekletir.*/
+}
+
+.navbar ul li a:active {
+    color: #24caac;
+    /* Menü linklerine basılı tutunca yazının rengini değiştirir.*/
+}
+
+section {
+    margin-left: 0px;
+    padding: 20px 0px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.inner_anasayfa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.child_anasayfa {
+    display: flex;
+    flex-basis: 45%;
+    /* Mobil uygulamarda düzgün gözükmesini sağlar.*/
+}
+
+.child_anasayfa img {
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.child_anasayfa p {
+    color: wheat;
+    letter-spacing: 2px;
+    font-size: 30px;
+    margin-left: 120px;
+    padding: 5px;
+    width: 500px;
+    height: 450px;
+    border: 2px solid black;
+    border-radius: 20px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+.inner_anasayfa1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 70px;
+    width: 80%;
+}
+
+.inner_anasayfa1 img {
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 500px;
+    height: 450;
+}
+
+.inner_anasayfa1 p {
+    color: wheat;
+    letter-spacing: 2px;
+    font-size: 30px;
+    margin-left: 120px;
+    padding: 5px;
+    width: 500px;
+    height: 450px;
+    border: 2px solid black;
+    border-radius: 20px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.child_anasayfa1 {
+    display: flex;
+}
+
+.section_title {
+    margin-bottom: 30px;
+}
+
+.section_title h2 {
+    position: relative;
+    text-align: center;
+    color: #24caac;
+    font-size: 30px;
+    transition: all .3s ease-in-out;
+    align-items: center;
+    background-color: rgba(95, 45, 1, 0.575);
+}
+
+.section_title h2:hover {
+    background-color: rgba(55, 66, 80, 0.281);
+    transform: scale(1.5);
+}
+
+.fotos {
+    padding-left: 3px;
+    flex-basis: 50%;
+    flex-wrap: wrap;
+}
+
+.foto {
+    border-radius: 5px;
+    transition: 1s ease-in-out;
+    /* Geçiş efektini hem başlarken hemde bitirirken yumuşak uygular.*/
+    margin: 0px 4px;
+    margin-bottom: 5px;
+}
+
+.foto:hover {
+    /* Her bir fotoğrafın üstüne gelince fotoğrafın boyutlarını geçiş efektiyle büyütür.*/
+    -ms-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    transition: all .5s ease-in-out;
+    border-radius: 10px;
+}
+
+.fotos #cicek {
+    /* Çiçek fotoğrafı tam sığmadığı için fotografı sığdırmaya çalışır.*/
+    object-fit: cover;
+}
+
+.paragraf {
+    color: #36352d;
+    font-size: 25px;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.container {
+    width: 90%;
+    margin: 60px 20px;
+}
+
+.container .bolum1 {
+    display: flex;
+    /* İçindekileri yanyana getirir.*/
+    padding: 20px 10px;
+}
+
+.container img {
+    border: 2px solid #eee;
+    border-radius: 5px;
+}
+
+.container .baslik {
+    color: #0f062e;
+    letter-spacing: 2px;
+    /* Yazıdaki her harfin arasına 2px boşluk koyar.*/
+}
+
+.container .pratik1 {
+    text-align: left;
+    padding-left: 50px;
+    margin-top: 20px;
+    font-weight: lighter;
+    font-size: 20px;
+    color: #416e66;
+}
+
+.container .pratik2 {
+    text-align: right;
+    padding-right: 50px;
+    margin-top: 20px;
+    font-weight: lighter;
+    font-size: 20px;
+    color: rgb(67, 77, 105);
+}
+
+.container .bolum2 {
+    display: flex;
+    padding: 20px 10px;
+}
+
+.tarihce1 img {
+    width: 985px;
+    height: 640px;
+}
+
+.tarihce2 img {
+    width: 985px;
+    height: 640px;
+}
+
+.tarihce3 img {
+    width: 985px;
+    height: 640px;
+}
+
+.tarih .para1 {
+    position: absolute;
+    /* Kendisin pozisyonunu parentine göre ayarlar.*/
+    font-size: 20px;
+    color: #fff;
+    left: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+.tarih .para2 {
+    position: absolute;
+    font-size: 20px;
+    color: #fff;
+    left: 200px;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.tarih .para3 {
+    position: absolute;
+    font-size: 20px;
+    color: #fff;
+    left: 200px;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.hakkimda-div {
+    display: flex;
+    padding: 10px;
+}
+
+.hakkimda-div .hakkimdafoto img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+.hakkimda-div .hakkimdayazi{
+    background-color: #cab486;
+    border-radius: 10px;
+}
+
+.hakkimda-div .hakkimdayazi h1 {
+    color: rgb(0, 120, 198);
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hakkimda-div .hakkimdayazi pre {
+    color: #0f062e;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.hakkimda-div .hakkimdayazi pre i{
+    color: #dfd7c7;
+    font-size: 25px;
+}
+
+.hakkimda-div .hakkimdayazi .btn{
+    margin-bottom: 30px;
+    background-color: rgb(200, 200, 200);
+    border: 1px solid #e98b20;
+    border-radius: 20px; 
+    font-size: 20px;
+    padding: 10px;
+    letter-spacing: 1px;
+    transition: .4s ease-in-out;   
+}
+
+.hakkimda-div .hakkimdayazi .btn a{
+    text-decoration: none;
+    color: #e98b20;   
+}
+
+.hakkimda-div .hakkimdayazi .btn:hover{
+    background-color: gray;
+    transform: scale(1.2);
+    border: 2px solid #c8c5c5;
+}
+
+.inner_contact{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.child_contact{
+    flex-basis: 45%;
+}
+
+.child_contact img{
+    width: 600px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.child_contact form{
+    padding: 50px 40px;
+    background: #2f363e;
+    border-radius: 20px;
+}
+
+.child_contact form input,textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #24292d;
+    border: none;
+    resize: none;
+    border-radius: 25px;
+    transition: .3s ease-in-out;
+}
+
+.child_contact form input:focus,textarea:focus{
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.child_contact form input:last-child{
+    margin-bottom: 0px;
+    background: #24caac;
+    border: 1px solid #24caac;
+    transition: .3s;
+    font-size: 20px;
+}
+
+.child_contact form input:last-child:hover{
+    color: #fff;
+    background: transparent;
+    cursor: pointer;
+}
+
+footer{
+    background-color: rgb(130, 123, 123);
+}
+
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+.footerNav{
+    margin: 30px 0;
+}
+
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;   
+    font-size: 1.5em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+
+.footerBottom{
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.footerBottom p{
+    color: white;
+    font-size: 22px;
+}
+
+.designer{
+    opacity: 0.7;
+    letter-spacing: 1px;
+    font-weight: 400px;
+    margin: 0px 5px;
+}
+
+/* 980 pikselin altına düştüğünde bu kodlar çalışır. Responsive'lik katar. */
+@media screen and (max-width:980px){
+    
+    .footerNav ul{
+        flex-direction: column;
+    }
+    .footerNav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
